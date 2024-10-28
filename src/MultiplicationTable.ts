@@ -2,7 +2,6 @@ export class MultiplicationTable {
   public render(start: number, end: number): string{
     if(!this.isInputValid(start,end))
       return '';
-    console.log(this.tableRender(this.genMultiplicationTable(start,end)));
     return this.tableRender(this.genMultiplicationTable(start,end));
   }
   public isInputValid(start:number,end:number):boolean{
