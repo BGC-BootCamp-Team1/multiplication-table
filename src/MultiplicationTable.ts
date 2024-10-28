@@ -33,7 +33,20 @@ export class MultiplicationTable {
   }
 
   private renderTable(mulList: Array<Array<string>>): string {
-    throw new Error("Method not implemented.");
+    let output: string = "";
+    for (let row = 0 ; row < mulList.length ; row++)
+    {
+      for (let col = 0 ; col < mulList[row].length ; col++) {
+        output += mulList[row][col];
+        if (col != mulList[row].length - 1) {
+          output += "  ";
+        }
+      }
+      if (row != mulList.length - 1) {
+        output += "\n";
+      }
+    }
+    return output;
   }
 
   private isInputValid(start: number, end: number): boolean{
