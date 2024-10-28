@@ -20,9 +20,9 @@ export class MultiplicationTable {
   }
 
   public generateTable(start: number, end: number): string[][] {
-    let table:string[][] = [];
-    for(let i = start; i<=end; i++){
-      table.push(this.generateOneRow(start,i));
+    let table: string[][] = [];
+    for (let i = start; i <= end; i++) {
+      table.push(this.generateOneRow(start, i));
     }
     return table;
   }
@@ -30,17 +30,17 @@ export class MultiplicationTable {
   public render(start: number, end: number): string {
     let table = this.generateTable(start, end);
     let renderedTable: string = "";
-    table.forEach((row,rowIndex) => {
+    table.forEach((row, rowIndex) => {
       let renderedRow: string = "";
-      row.forEach((equation, equationIndex)=>{
-        let equationLength = this.calculateEquationLength(table, equationIndex)
-        if(equationIndex!=row.length-1){
-          equation = equation.padEnd(equationLength, ' ');
+      row.forEach((equation, equationIndex) => {
+        let equationLength = this.calculateEquationLength(table, equationIndex);
+        if (equationIndex != row.length - 1) {
+          equation = equation.padEnd(equationLength, " ");
         }
         renderedRow += equation;
-      })
-      renderedTable+=renderedRow;
-      if(rowIndex!=table.length-1){
+      });
+      renderedTable += renderedRow;
+      if (rowIndex != table.length - 1) {
         renderedTable += "\n";
       }
     });
@@ -48,20 +48,21 @@ export class MultiplicationTable {
   }
 
   public generateOneMultiplation(num1: number, num2: number): string {
-    let oneMultiplication = `${num1}*${num2}=${(num1*num2)}`
-    return oneMultiplication;
+    return `${num1}*${num2}=${num1 * num2}`;
   }
 
   public generateOneRow(rowStart: number, rowEnd: number): string[] {
-    let row:string[] = [];
-    for(let i = rowStart; i<=rowEnd; i++){
-      row.push(this.generateOneMultiplation(i,rowEnd));
+    let row: string[] = [];
+    for (let i = rowStart; i <= rowEnd; i++) {
+      row.push(this.generateOneMultiplation(i, rowEnd));
     }
     return row;
   }
 
-  private calculateEquationLength(table: string[][], columnIndex: number):number{
-    return table[table.length-1][columnIndex].length+2;
-  } 
-
+  private calculateEquationLength(
+    table: string[][],
+    columnIndex: number
+  ): number {
+    return table[table.length - 1][columnIndex].length + 2;
+  }
 }
