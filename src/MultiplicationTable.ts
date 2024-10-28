@@ -19,10 +19,12 @@ export class MultiplicationTable {
     return num >= 1 || num <= 10;
   }
 
-  public generateTable(start: number, end: number): string {
-    var result = "";
-
-    return result;
+  public generateTable(start: number, end: number): string[] {
+    let table:string[] = [];
+    for(let i = start; i<=end; i++){
+      table=table.concat(this.generateOneRow(start,i));
+    }
+    return table;
   }
 
   public render(start: number, end: number): string {
