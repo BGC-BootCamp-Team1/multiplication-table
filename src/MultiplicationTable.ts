@@ -28,4 +28,10 @@ export class MultiplicationTable {
   public render(start: number, end: number): string {
     return "1*1=1";
   }
+
+  public generateOneMultiplation(num1: number, num2: number): string {
+    return `${num1}*${num2}=${num1*num2}`;
+  }
+
+
 }
