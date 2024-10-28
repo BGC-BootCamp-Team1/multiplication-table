@@ -33,5 +33,12 @@ export class MultiplicationTable {
     return `${num1}*${num2}=${num1*num2}`;
   }
 
+  public generateOneRow(rowStart: number, rowEnd: number): string[] {
+    let row:string[] = [];
+    for(let i = rowStart; i<=rowEnd; i++){
+      row.push(this.generateOneMultiplation(rowStart,i));
+    }
+    return row;
+  }
 
 }
