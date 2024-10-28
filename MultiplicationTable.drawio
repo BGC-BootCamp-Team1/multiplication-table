@@ -1,9 +1,117 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" version="24.8.3">
   <diagram name="Page-1" id="hFk0t2kClv_VIicD1bxA">
-    <mxGraphModel>
+    <mxGraphModel dx="1209" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="180" as="sourcePoint" />
+            <mxPoint x="160" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-4" value="start: number &#xa;end: number" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="240" as="sourcePoint" />
+            <mxPoint x="410" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-8" value="start: number &#xa;end: number" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="200" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-9" value="render" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="120" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-10" value="isInputValid" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.023;exitY=0.613;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-10" target="FyY2jl6Rk4GBpOskJA4_-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="250" as="sourcePoint" />
+            <mxPoint x="390" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-13" value="boolean" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.984;exitY=0.471;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-9" target="FyY2jl6Rk4GBpOskJA4_-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="350" as="sourcePoint" />
+            <mxPoint x="410" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-16" value="start: number &#xa;end: number" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="310" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-17" value="genMultiplicationTable" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="330" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.023;exitY=0.613;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="360" as="sourcePoint" />
+            <mxPoint x="280" y="367" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-19" value="multiplicationTable: string[][]" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="285" y="370" width="155" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="350" as="sourcePoint" />
+            <mxPoint x="710" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-22" value="start:number&lt;div&gt;rowNumber:number&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="310" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-23" value="genMultiplicationRow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.023;exitY=0.613;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="360" as="sourcePoint" />
+            <mxPoint x="580" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-25" value="row:string[]" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.022;exitY=0.811;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-9" target="FyY2jl6Rk4GBpOskJA4_-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="480" as="sourcePoint" />
+            <mxPoint x="410" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-27" value="multiplicationTable:string[][]" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="440" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-28" value="tableRender" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.023;exitY=0.613;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="FyY2jl6Rk4GBpOskJA4_-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="490" as="sourcePoint" />
+            <mxPoint x="280" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-30" value="result:string" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="500" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.023;exitY=0.613;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="540" as="sourcePoint" />
+            <mxPoint x="33" y="541" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-34" value="result:string" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="550" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FyY2jl6Rk4GBpOskJA4_-35" value="MultiplicationTable" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=30;" vertex="1" parent="1">
+          <mxGeometry x="370" y="60" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
