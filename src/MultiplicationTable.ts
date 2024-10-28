@@ -10,7 +10,7 @@ export class MultiplicationTable {
   }
 
   public secondInputLargerThanFirst(start: number, end: number): boolean{
-    return false;
+    return end>=start;
   }
   
   public inRange1to10(start: number, end: number): boolean
