@@ -19,16 +19,25 @@ export class MultiplicationTable {
     return num >= 1 && num <= 10;
   }
 
-  public generateTable(start: number, end: number): string[] {
-    let table:string[] = [];
+  public generateTable(start: number, end: number): string[][] {
+    let table:string[][] = [];
     for(let i = start; i<=end; i++){
-      table=table.concat(this.generateOneRow(start,i));
+      table.push(this.generateOneRow(start,i));
     }
     return table;
   }
 
   public render(start: number, end: number): string {
-    return "1*1=1";
+    let table = this.generateTable(start, end);
+    let rendered: string = "";
+    table.forEach(element => {
+      element.forEach(value=>{
+        rendered +=value;
+        rendered += "  ";
+      })
+      rendered += "\n";
+    });
+    return rendered;
   }
 
   public generateOneMultiplation(num1: number, num2: number): string {
