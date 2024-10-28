@@ -14,8 +14,22 @@ export class MultiplicationTable {
     return outputStr;
   }
 
-  private generateMultiplicationList(start: number, end: number): string[][] {
-    throw new Error("Method not implemented.");
+  private generateMultiplicationList(start: number, end: number): Array<Array<string>> {
+    let output2D = new Array<Array<string>>();
+    for (let i = start ; i <= end ; i++)
+    {
+      let mulRow = new Array<string>();
+      for (let j = start ; j <= i ; j++)
+      {
+        let singleMulStr = this.generateSingleMultiplication(j, i);
+        mulRow.push(singleMulStr);
+      }
+      output2D.push(mulRow);
+    }
+    return output2D;
+  }
+  private generateSingleMultiplication(firstNum: number, secondNum: number): string {
+    throw new Error("Function not implemented.");
   }
 
   private renderTable(mulList: string[][]): string {
@@ -38,3 +52,4 @@ export class MultiplicationTable {
     return start <= end;
   }
 }
+
