@@ -7,7 +7,9 @@ export class MultiplicationTable {
     return start<=end;
   }
 
-  private isInRange(number:number){
+  private isInRange(number:number):boolean{
     return number>=1 && number<=10;
   }
+
+
 }
