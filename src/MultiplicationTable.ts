@@ -1,9 +1,5 @@
 export class MultiplicationTable {
   public render(start: number, end: number): string{
-    // AC1: The start number should not be greater than the end number, otherwise the function will return nothing.
-    // AC2: The start number and the end number can be any integer in a range of 1 to 10 (inclusive).
-    // AC3: The output should be a string represents the multiplication table. Suppose that the start number is 2 and the end number is 4, the output should be something like the following.
-
     let isValid = this.isInputValid(start, end);
     if (!isValid)
       return "";
