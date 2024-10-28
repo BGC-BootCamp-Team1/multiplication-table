@@ -29,27 +29,39 @@ export class MultiplicationTable {
 
   public render(start: number, end: number): string {
     let table = this.generateTable(start, end);
-    let rendered: string = "";
-    table.forEach(element => {
-      element.forEach(value=>{
-        rendered +=value;
-        rendered += "  ";
+    let renderedTable: string = "";
+    table.forEach((row,rowIndex) => {
+      let renderedRow: string = "";
+      row.forEach((equation, equationIndex)=>{
+        let equationLength = this.calculateEquationLength(table, equationIndex)
+        if(equationIndex!=row.length-1){
+          equation = equation.padEnd(equationLength, ' ');
+        }
+        renderedRow += equation;
       })
-      rendered += "\n";
+      renderedTable+=renderedRow;
+      if(rowIndex!=table.length-1){
+        renderedTable += "\n";
+      }
     });
-    return rendered;
+    return renderedTable;
   }
 
   public generateOneMultiplation(num1: number, num2: number): string {
-    return `${num1}*${num2}=${num1*num2}`;
+    let oneMultiplication = `${num1}*${num2}=${(num1*num2)}`
+    return oneMultiplication;
   }
 
   public generateOneRow(rowStart: number, rowEnd: number): string[] {
     let row:string[] = [];
     for(let i = rowStart; i<=rowEnd; i++){
-      row.push(this.generateOneMultiplation(rowStart,i));
+      row.push(this.generateOneMultiplation(i,rowEnd));
     }
     return row;
   }
+
+  private calculateEquationLength(table: string[][], columnIndex: number):number{
+    return table[table.length-1][columnIndex].length+2;
+  } 
 
 }
