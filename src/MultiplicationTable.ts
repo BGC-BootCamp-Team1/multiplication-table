@@ -11,15 +11,15 @@ export class MultiplicationTable {
     }
   }
 
-  public secondInputLargerThanFirst(start: number, end: number): boolean {
+  private secondInputLargerThanFirst(start: number, end: number): boolean {
     return end >= start;
   }
 
-  public inRange1to10(num: number): boolean {
+  private inRange1to10(num: number): boolean {
     return num >= 1 && num <= 10;
   }
 
-  public generateTable(start: number, end: number): string[][] {
+  private generateTable(start: number, end: number): string[][] {
     let table: string[][] = [];
     for (let i = start; i <= end; i++) {
       table.push(this.generateOneRow(start, i));
@@ -27,7 +27,7 @@ export class MultiplicationTable {
     return table;
   }
 
-  public render(start: number, end: number): string {
+  private render(start: number, end: number): string {
     let table = this.generateTable(start, end);
     let renderedTable: string = "";
     table.forEach((row, rowIndex) => {
@@ -47,14 +47,14 @@ export class MultiplicationTable {
     return renderedTable;
   }
 
-  public generateOneMultiplation(num1: number, num2: number): string {
+  private generateOneEquation(num1: number, num2: number): string {
     return `${num1}*${num2}=${num1 * num2}`;
   }
 
-  public generateOneRow(rowStart: number, rowEnd: number): string[] {
+  private generateOneRow(rowStart: number, rowEnd: number): string[] {
     let row: string[] = [];
     for (let i = rowStart; i <= rowEnd; i++) {
-      row.push(this.generateOneMultiplation(i, rowEnd));
+      row.push(this.generateOneEquation(i, rowEnd));
     }
     return row;
   }
