@@ -8,7 +8,7 @@ describe('Multiplication Table', () => {
     const end = 1
 
     //when
-    const rendered = table.render(start, end)
+    const rendered = table.renderMultiplicationTable(start, end)
 
     //then
     expect(rendered).toBe('')
@@ -20,7 +20,7 @@ describe('Multiplication Table', () => {
     const end = 11
 
     //when
-    const rendered = table.render(start, end)
+    const rendered = table.renderMultiplicationTable(start, end)
 
     //then
     expect(rendered).toBe('')
@@ -32,7 +32,7 @@ describe('Multiplication Table', () => {
     const end = 4
 
     //when
-    const rendered = table.render(start, end)
+    const rendered = table.renderMultiplicationTable(start, end)
 
     //then
     const expected = `2*2=4
@@ -47,7 +47,7 @@ describe('Multiplication Table', () => {
     const end = 10
 
     //when
-    const rendered = table.render(start, end)
+    const rendered = table.renderMultiplicationTable(start, end)
 
     //then
     const expected = `1*1=1

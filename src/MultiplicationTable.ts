@@ -1,5 +1,5 @@
 export class MultiplicationTable {
-  public generateMultiplicationTable(start: number, end: number): string {
+  public renderMultiplicationTable(start: number, end: number): string {
     if (!this.secondInputLargerThanFirst(start, end)) {
       return "";
     } else if (!this.inRange1to10(start)) {
@@ -16,7 +16,7 @@ export class MultiplicationTable {
   }
 
   public inRange1to10(num: number): boolean {
-    return num >= 1 || num <= 10;
+    return num >= 1 && num <= 10;
   }
 
   public generateTable(start: number, end: number): string[] {
