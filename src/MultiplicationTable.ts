@@ -32,7 +32,7 @@ export class MultiplicationTable {
     return true;
   }
   private isInRange(num: number): boolean {
-    throw new Error("Method not implemented.");
+    return num >= 1 && num <= 10;
   }
   private isStartSmallerThanEnd(start: number, end: number): boolean {
     throw new Error("Method not implemented.");
