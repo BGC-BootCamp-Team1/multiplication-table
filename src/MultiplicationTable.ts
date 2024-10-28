@@ -15,5 +15,12 @@ export class MultiplicationTable {
     }
     return row;
   }
+  public genMultiplicationTable(start:number,end:number):string[][]{
+    let multiplicationTable:string[][]=[];
+    for(let i=start;i<end;i++){
+      multiplicationTable[i]=this.genMultiplicationRow(start,i);
+    }
+    return multiplicationTable
+  }
 
 }
