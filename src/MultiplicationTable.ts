@@ -34,12 +34,14 @@ export class MultiplicationTable {
 
   private renderTable(mulList: Array<Array<string>>): string {
     let output: string = "";
+    let colLen: Array<number> = this.recordColumnLength(mulList[-1]);
     for (let row = 0 ; row < mulList.length ; row++)
     {
       for (let col = 0 ; col < mulList[row].length ; col++) {
         output += mulList[row][col];
         if (col != mulList[row].length - 1) {
-          output += "  ";
+          let space = " ";
+          output += space.repeat(colLen[col] - mulList[row][col].length);
         }
       }
       if (row != mulList.length - 1) {
@@ -47,6 +49,9 @@ export class MultiplicationTable {
       }
     }
     return output;
+  }
+  private recordColumnLength(arg0: string[]): Array<number> {
+    throw new Error("Method not implemented.");
   }
 
   private isInputValid(start: number, end: number): boolean{
