@@ -26,9 +26,17 @@ export class MultiplicationTable {
     return multiplicationTable
   }
   public tableRender(multiplicationTable:string[][]):string{
-    let RenderedMultiplicationTable: string = '';
-    RenderedMultiplicationTable = multiplicationTable.map(row => row.join(' ')).join('\n');
-    return RenderedMultiplicationTable
+    const lastRow = multiplicationTable[multiplicationTable.length - 1];
+    const columnWidths = lastRow.map(item => item.length)
+
+    let result:string = '';
+    for (const row of multiplicationTable) {
+      const formattedRow = row.map((item, index) => {
+          return item.padEnd(columnWidths[index], ' ');
+      }).join('  ');
+      result += formattedRow.trim() + '\n';
+    }
+    return result.trim();
   }
 
 }
