@@ -29,7 +29,7 @@ export class MultiplicationTable {
     return output2D;
   }
   private generateSingleMultiplication(firstNum: number, secondNum: number): string {
-    throw new Error("Function not implemented.");
+    return firstNum + "*" + secondNum + "=" + firstNum * secondNum;
   }
 
   private renderTable(mulList: Array<Array<string>>): string {
