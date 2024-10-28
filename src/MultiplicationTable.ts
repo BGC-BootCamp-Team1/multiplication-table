@@ -3,7 +3,33 @@ export class MultiplicationTable {
     return "1*1=1";
   }
 
-  
+  public generateMultiplicationTable(start: number, end: number): string[][] {
+    const table: string[][] = [];
+    for (let i = start; i <= end; i++) {
+      const rowItems = this.generateMultiplicationRow(start, i);
+      table.push(rowItems);
+    }
+    return table;
+  }
+
+  public generateMultiplicationRow(
+    start: number,
+    rowMultiplier: number
+  ): string[] {
+    const rowItems: string[] = [];
+    for (let i = start; i <= rowMultiplier; i++) {
+      rowItems.push(this.generateMultiplicationItem(rowMultiplier, i));
+    }
+    return rowItems;
+  }
+
+  public generateMultiplicationItem(
+    multiplierRow: number,
+    multiplierColumn: number
+  ): string {
+    const product = multiplierRow * multiplierColumn;
+    return "${multiplierRow} * {multiplierColumn} = {product}";
+  }
 
   public isValidInput(start: number, end: number): boolean {
     return (
@@ -20,6 +46,4 @@ export class MultiplicationTable {
   public isValidRange(num: number): boolean {
     return num >= 1 && num <= 10;
   }
-
-  
 }
