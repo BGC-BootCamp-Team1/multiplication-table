@@ -4,26 +4,44 @@ exports.MultiplicationTable = void 0;
 var MultiplicationTable = /** @class */ (function () {
     function MultiplicationTable() {
     }
-    MultiplicationTable.prototype.render = function (table) {
+    MultiplicationTable.prototype.renderTable = function (mulList) {
         var output = "";
-        // 找到每列的最大宽度
-        var colWidths = table[0].map(function (_, colIndex) {
-            return Math.max.apply(Math, table.map(function (row) { return row[colIndex].length; }));
-        });
-        for (var _i = 0, table_1 = table; _i < table_1.length; _i++) {
-            var row = table_1[_i];
-            var formattedRow = row.map(function (item, index) {
-                // 根据每列的最大宽度填充空格
-                return item.padEnd(colWidths[index] + 2); // +2 为了增加一点格式美观
-            }).join(''); // 使用空字符串连接
-            output += formattedRow + '\n'; // 每行添加换行符
+        var colLen = this.recordColumnLength(mulList[mulList.length - 1]);
+        console.log(colLen);
+        console.log(mulList.length);
+        console.log(mulList[mulList.length - 1].length);
+        for (var row = 0; row < mulList.length; row++) {
+            for (var col = 0; col < mulList[row].length; col++) {
+                output += mulList[row][col];
+                if (col != mulList[row].length - 1) {
+                    var space = " ";
+                    output += space.repeat(colLen[col] - mulList[row][col].length);
+                }
+            }
+            if (row != mulList.length - 1) {
+                output += "\n";
+            }
+        }
+        return output;
+    };
+    MultiplicationTable.prototype.render = function (start, end) {
+        if (!this.isValidInput(start, end)) {
+            return '';
+        }
+        // let output: string = '';
+        var table = this.generateMultiplicationTable(start, end);
+        var output = this.renderTable(table);
+        return output;
+    };
+    MultiplicationTable.prototype.recordColumnLength = function (row) {
+        var output = new Array();
+        for (var _i = 0, row_1 = row; _i < row_1.length; _i++) {
+            var singleMul = row_1[_i];
+            output.push(singleMul.length + 2);
         }
         return output;
     };
     MultiplicationTable.prototype.generateMultiplicationTable = function (start, end) {
-        if (!this.isValidInput(start, end)) {
-            return [];
-        }
         var table = [];
         for (var i = start; i <= end; i++) {
             var rowItems = this.generateMultiplicationRow(start, i);
@@ -40,7 +58,8 @@ var MultiplicationTable = /** @class */ (function () {
     };
     MultiplicationTable.prototype.generateMultiplicationItem = function (multiplierRow, multiplierColumn) {
         var product = multiplierRow * multiplierColumn;
-        return "".concat(multiplierRow, " * ").concat(multiplierColumn, " = ").concat(product);
+        // return `${multiplierRow}*${multiplierColumn}=${product}`;
+        return "".concat(multiplierColumn, "*").concat(multiplierRow, "=").concat(product);
     };
     MultiplicationTable.prototype.isValidInput = function (start, end) {
         return (this.isValidRange(start) &&
@@ -56,6 +75,12 @@ var MultiplicationTable = /** @class */ (function () {
     return MultiplicationTable;
 }());
 exports.MultiplicationTable = MultiplicationTable;
+// const table = new MultiplicationTable();
+// const generatedTable = table.generateMultiplicationTable(2, 1);
+// console.log(table.render(generatedTable));
 var table = new MultiplicationTable();
-var generatedTable = table.generateMultiplicationTable(2, 3);
-console.log(table.render(generatedTable));
+var start = 2;
+var end = 10;
+//when
+var rendered = table.render(start, end);
+console.log(rendered);
