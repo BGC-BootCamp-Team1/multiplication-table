@@ -17,19 +17,24 @@ export class MultiplicationTable {
   private generateMultiplicationList(start: number, end: number): string[][] {
     throw new Error("Method not implemented.");
   }
-  
+
   private renderTable(mulList: string[][]): string {
     throw new Error("Method not implemented.");
   }
 
   private isInputValid(start: number, end: number): boolean{
+    if (!this.isStartSmallerThanEnd(start, end))
+      return false;
+    if (!this.isInRange(start))
+      return false;
+    if (!this.isInRange(end))
+      return false;
+    return true;
+  }
+  private isInRange(num: number): boolean {
     throw new Error("Method not implemented.");
-    // if (!this.isStartSmallerThanEnd(start, end))
-    //   return false;
-    // if (!this.isInRange(start))
-    //   return false;
-    // if (!this.isInRange(end))
-    //   return false;
-    // return true;
+  }
+  private isStartSmallerThanEnd(start: number, end: number): boolean {
+    throw new Error("Method not implemented.");
   }
 }
