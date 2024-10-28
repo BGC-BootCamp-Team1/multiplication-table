@@ -21,4 +21,19 @@ export class MultiplicationTable {
     return martix;
   }
 
+  private contactMultiplicationFrom(start: number, end: number,martix:number[][]):string{
+    let res:string = '';
+    for (let index = start; index < end; index++) {
+      res=res+`${martix[index][0]}*${martix[index][1]}=${martix[index][0]*martix[index][1]}`
+      for (let j = 0; j < index; j++) {
+        if (j=index-1) {
+          res=res+'\n'
+        }else{
+          res=res+'\t'
+        }
+      }
+    }
+    return res;
+  }
+
 }
