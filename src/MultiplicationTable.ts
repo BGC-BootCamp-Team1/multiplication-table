@@ -32,7 +32,7 @@ export class MultiplicationTable {
     throw new Error("Function not implemented.");
   }
 
-  private renderTable(mulList: string[][]): string {
+  private renderTable(mulList: Array<Array<string>>): string {
     throw new Error("Method not implemented.");
   }
 
