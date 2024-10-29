@@ -7,7 +7,8 @@ export class MultiplicationTable {
     } else if (!this.inRange1to10(end)) {
       return "";
     } else {
-      return this.render(start, end);
+      let table = this.generateTable(start, end);
+      return this.render(table);
     }
   }
 
@@ -27,8 +28,19 @@ export class MultiplicationTable {
     return table;
   }
 
-  private render(start: number, end: number): string {
-    let table = this.generateTable(start, end);
+  private generateOneRow(rowStart: number, rowEnd: number): string[] {
+    let row: string[] = [];
+    for (let i = rowStart; i <= rowEnd; i++) {
+      row.push(this.generateOneEquation(i, rowEnd));
+    }
+    return row;
+  }
+
+  private generateOneEquation(num1: number, num2: number): string {
+    return `${num1}*${num2}=${num1 * num2}`;
+  }
+
+  private render(table: string[][]): string {
     let renderedTable: string = "";
     table.forEach((row, rowIndex) => {
       let renderedRow: string = "";
@@ -45,18 +57,6 @@ export class MultiplicationTable {
       }
     });
     return renderedTable;
-  }
-
-  private generateOneEquation(num1: number, num2: number): string {
-    return `${num1}*${num2}=${num1 * num2}`;
-  }
-
-  private generateOneRow(rowStart: number, rowEnd: number): string[] {
-    let row: string[] = [];
-    for (let i = rowStart; i <= rowEnd; i++) {
-      row.push(this.generateOneEquation(i, rowEnd));
-    }
-    return row;
   }
 
   private calculateEquationLength(
