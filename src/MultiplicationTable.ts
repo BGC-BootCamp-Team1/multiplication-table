@@ -5,7 +5,7 @@ export class MultiplicationTable {
     return this.tableRender(this.genMultiplicationTable(start,end));
   }
   public isInputValid(start:number,end:number):boolean{
-    if(start<=end && start>=0 && end<=10) 
+    if(start<=end && start>=1 && end<=10) 
       return true
     else 
       return false
